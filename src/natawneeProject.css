@@ -1,0 +1,35 @@
+div {
+    background-color:#fff5ee;
+    border-radius: 4px;
+     
+}
+Body {
+    background-color: #fff5ee;
+    font-family: 'Lucida Sans';
+    font-size: medium;
+}
+
+h4 {
+    font-family: 'Lucida Sans';
+    font-size: larger;
+
+    
+}
+img {
+    border-radius: 4px;
+    width: 100px;
+    height: 100px;
+}
+button {
+    border-radius: 4px;
+    background-color: #9400d3;
+    font-family: 'Lucida Sans';
+    
+    
+}
+#imageContainer{
+    background-color:black;
+    border-radius: 4px;
+    width: 600px;
+    height: 600px;
+}
