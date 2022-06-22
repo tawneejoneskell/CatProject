@@ -1,6 +1,6 @@
 window.getCatData = async function(e){
     e.preventDefault();
-    var accessKey = `${process.env.TEST_KEY}`;
+    var accessKey = `${process.env.CAT_API_KEY}`;
     console.log(accessKey);
 
     try{
