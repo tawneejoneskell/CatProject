@@ -2,11 +2,11 @@
   "name": "catproject",
   "version": "1.0.0",
   "description": "Natawnee's first node.js javascript project.",
-  "main": "natawneeProject.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
-    "start": "webpack --config webpack.config.js && live-server --browser=CHROME --open=src/natawneeProject.html"
+    "start": "webpack --config webpack.config.js && live-server --browser=CHROME --open=src/index.html"
   },
   "repository": {
     "type": "git",
