@@ -8,4 +8,4 @@ function node-project {
   npm init -y
   git add -A
   git commit -m "Initial commit"
-}
+}/
