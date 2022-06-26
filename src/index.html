@@ -5,12 +5,13 @@
     <meta charset="ISO-8859-1">
     <link rel="stylesheet" href="./index.css">
     <title> Choose your Cat!</title>
+    <script src = "javascript/indexOnLoad.js"></script>
 </head>
 
 <body ID="body">
     <div ID="container">
         <h4 ID="header"> Ready to pick your favorite Cat?</h4>
-        <p style="color:#9400d3"> Choose your Cat!</p>
+        <p> Choose your Cat!</p>
         <!--
         <a href="https://mysnhu.force.com/mysnhu/s/"> Click here!</a>
         -->
@@ -28,10 +29,12 @@
         </form>
         <br>
         <button onclick="getCatData(event)">submit</button>
+        <br>
+        <button onclick="secretMessage('Natawnee')"> Get your secret message!</button>
     </div>
     <div ID="imageContainer">  
     </div>
-        <script src="../dist/bundle.js" ></script>
+    <script src="../dist/bundle.js" ></script>
 </body>
 
 </html>
