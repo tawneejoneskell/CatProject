@@ -21,3 +21,4 @@ window.getCatData = async function(e){
         console.log(error);
     }
 }
+
