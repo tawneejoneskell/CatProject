@@ -3,6 +3,9 @@ div {
     border-radius: 4px;
      
 }
+#container{
+    margin-left: 40px;
+}
 Body {
     background-color: #fff5ee;
     font-family: 'Lucida Sans';
@@ -28,7 +31,7 @@ table, th, td {
     border-radius:8px;
   border-collapse: collapse;
   background-color: #9400d3;
-  margin-left:400px;
+  margin-left:700px;
 }
 th, td {
     padding-left:4px;
@@ -48,17 +51,43 @@ img {
 p {
    color:#9400d3
 }
-p:hover {
-    animation-name: colorAnim;
-    animation-duration: .25s;
-}
-button {
+#submitButton {
+    margin-top: 10px;
     border-radius: 4px;
     background-color: #9400d3;
     font-family: 'Lucida Sans';
 }
-button:hover {
+#submitButton:hover {
     animation-name: buttonAnim;
     animation-duration: .25s;
     animation-fill-mode:forwards
+}
+
+#imageContainer {
+    margin-top: 30px;
+}
+
+input, select {
+    border-radius: 4px;
+}
+input:hover,select:hover{
+    background-color: lightgray;
+}
+#paragraphContainer{
+    float: left;
+}
+#tableContainer{
+    float: right;
+}
+#formContainer{
+    margin-top: 100px;
+}
+
+.inputAndLabel label {
+    float: left;
+    margin-bottom: 5px
+}
+
+.selectAndLabel {
+    clear: left;
 }

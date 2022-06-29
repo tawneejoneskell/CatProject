@@ -2,7 +2,6 @@ let dropdown = document.getElementById("dropdownMenu");
 let reloadFlag = false;
 
 window.prepareString = function(catString) {
-    console.log('CALLING PREPARE STRING.')
     return catString.replace(" ", "%20")
 }
 
@@ -62,10 +61,16 @@ window.getCatData = async function(e){
         newNode.style.boxShadow = '.5px 1px 15px  #9400d3';
         newNode.setAttribute('id', 'catImage')
         imageContainer.replaceChild(newNode, imageContainer.childNodes[0]);
-        reloadFlag = true;
+        
     }catch(error){
-        alert("There's an error fetching data");
         console.log(error);
+
+        const errorIcon = document.createElement('img');
+        errorIcon.style.maxHeight = '150px';
+        errorIcon.style.maxWidth = '150px';
+        errorIcon.setAttribute("src", "../../Images/errorIcon.png");
+        imageContainer.replaceChild(errorIcon, imageContainer.childNodes[0]);
     }
+    reloadFlag = true;
 }
 
