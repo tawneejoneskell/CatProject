@@ -23,6 +23,23 @@ h4 {
     font-family: 'Lucida Sans';
     font-size: larger;   
 }
+table, th, td {
+    border: 1px solid white;
+    border-radius:8px;
+  border-collapse: collapse;
+  background-color: #9400d3;
+  margin-left:400px;
+}
+th, td {
+    padding-left:4px;
+    padding-right:4px;
+    padding-top: 4px;
+    padding-bottom:4px;
+    text-align: center;
+}
+a:link, a:hover, a:visited, a:active {
+    color:black;
+}
 img {
     border-radius: 4px;
     width: auto;
