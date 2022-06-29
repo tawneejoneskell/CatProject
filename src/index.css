@@ -39,25 +39,9 @@ button {
     border-radius: 4px;
     background-color: #9400d3;
     font-family: 'Lucida Sans';
-  
-    
-    
 }
 button:hover {
     animation-name: buttonAnim;
     animation-duration: .25s;
     animation-fill-mode:forwards
-    
-
-}
-
-#imageContainer{
-    background-color:black;
-    box-shadow: 5px 10px 15px  #9400d3;
-    border-radius: 4px;
-    border-width: 3px;
-    border-style:solid;
-    width: 600px;
-    height: 600px;
-    margin-top: 100px;
 }
