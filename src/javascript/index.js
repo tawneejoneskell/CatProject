@@ -24,6 +24,7 @@ nameInput.addEventListener("change", getNameChange);
 
 window.getCatData = async function(e){
     e.preventDefault();
+    onNameChange();
     const imageContainer = document.getElementById('imageContainer');
     if(reloadFlag) {
         while(imageContainer.firstChild){
@@ -104,5 +105,10 @@ window.getCatData = async function(e){
         imageContainer.replaceChild(errorIcon, imageContainer.childNodes[0]);
     }
     reloadFlag = true;
+} 
+
+window.onNameChange = function(){
+    const askExperts = document.getElementById("askExperts");
+    askExperts.innerHTML = "Hello " + nameInput + ", is this the cat for you?";
 }
 
