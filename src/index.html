@@ -16,18 +16,18 @@
         </div>
         <div ID="tableContainer">
             <table>
-                <tr>
+                <tr class="firstRow">
                 <th> Is he a smart boy?</th>
                 <th> Is he a sheddy boy?</th>
                 <th> Does he like other kitties?</th>
                 </tr>
-                <tr>
+                <tr class="secondRow">
                     <td ID="intelligenceCell"></td>
                     <td ID="sheddingCell"></td>
                     <td ID="socialCell"></td>
                 </tr>
                 <tr class="thirdRow">
-                <td colspan="3"><a href=https://en.wikipedia.org/wiki/American_Shorthair> Ask the Experts:</a></td> 
+                <td colspan="3"><a href=https://en.wikipedia.org/wiki/American_Shorthair><span ID="askExperts">Ask the Experts:</span></a></td> 
                 </tr>
                 </table>
             </table>
@@ -40,7 +40,7 @@
         <form ID="catForm" onSubmit="submitFunction()"> 
             <div class="inputAndLabel">
             <label for="userName">Enter your Name:
-            <input ID="userName" type="text" name="userName" disabled /></label>
+            <input ID="nameInput" type="text" name="nameInput"/></label>
             </div>
             <div class="selectAndLabel">
             <label for="catMenu">Kitty:</label>

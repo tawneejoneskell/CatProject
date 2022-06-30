@@ -1,4 +1,5 @@
 let dropdown = document.getElementById("dropdownMenu");
+let nameInput = document.getElementById("nameInput");
 let reloadFlag = false;
 
 window.prepareString = function(catString) {
@@ -13,8 +14,13 @@ window.getChange = function(event){
     dropDownValue = prepareString(dropDownValue);
 }
 
-dropdown.addEventListener("change", getChange);
+window.getNameChange = function(event){
+    nameInput = event.target.value;
+    console.log(nameInput);
+}
 
+dropdown.addEventListener("change", getChange);
+nameInput.addEventListener("change", getNameChange);
 
 window.getCatData = async function(e){
     e.preventDefault();
