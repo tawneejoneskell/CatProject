@@ -40,7 +40,9 @@ window.getCatData = async function(e){
                 'x-api-key': accessKey
             },
         });
+        // this is the RESULT of the API call.
         let result= await request.json();
+        // it's being console logged for you here so you can read it in your browser.
         console.log(result);
         let breedId = result[0].id;
 
@@ -52,6 +54,12 @@ window.getCatData = async function(e){
         });
         let imageResult = await imageRequest.json();
         let pictureURL= imageResult[0].url;
+        // This is your hint and guide for how to take the cat data returned from the RESULT variable above and make it appear in your table.
+        // what I'm doing below is creating a new node or element, assigning it styles before it's even created, then finding a place in the
+        // DOM to append it (think of appending like giving your element up for adoption to a new parent).
+        // instead of "replaceChild", you'll simply be using "appendChild"... you just need to figure out where you'll be appending it.
+        // You need to take the appropriate catdata from the API result and get it into your table. May you be prosperous.
+        // lines 63-71 need to be adapted to your needs. Write your logic down after line 71.
         var newNode= document.createElement("img");
         newNode.src=pictureURL;
         newNode.style.maxHeight = "350px";
