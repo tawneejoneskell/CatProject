@@ -42,6 +42,10 @@ border: 1px solid #310742;
   padding-bottom:4px;
   text-align: center;
 }
+td{
+    font-family: impact;
+    font-size: large;
+}
 a:link, a:hover, a:visited, a:active {
     color:black;
 }
@@ -51,7 +55,7 @@ img {
     height: auto;
 }
 p {
-   color:#9400d3
+   color:black
 }
 #submitButton {
     margin-top: 10px;

@@ -45,6 +45,10 @@ window.getCatData = async function(e){
         // it's being console logged for you here so you can read it in your browser.
         console.log(result);
         let breedId = result[0].id;
+        let intelligence = result[0].intelligence;
+        let shedding_level = result[0].shedding_level;
+        let social_needs = result[0].social_needs;
+        console.log(social_needs)
 
         let imageRequest = await fetch(`${process.env.CAT_API_IMAGE_SEARCH_URL}${breedId}`, {
             method: "GET",
@@ -61,14 +65,28 @@ window.getCatData = async function(e){
         // You need to take the appropriate catdata from the API result and get it into your table. May you be prosperous.
         // lines 63-71 need to be adapted to your needs. Write your logic down after line 71.
         var newNode= document.createElement("img");
+        // dont create an element as above. Find the ID of an element already in existence on the HTML page
+        // and add your DATA to its 'innerHTML' attribute. For instance, if you are trying to insert your data
+        // into a <td> tag, give the <td> tag an ID and use document.getElementById to reference it, then 
+        // set its innerHTML attribute to whatever variable you have holding your data wrapped by a <p> tag.
         newNode.src=pictureURL;
+        // ignore these lines
         newNode.style.maxHeight = "350px";
         newNode.style.maxWidth = "350px";
         newNode.style.marginTop = '20px';
         newNode.style.borderRadius = '4px';
         newNode.style.boxShadow = '.5px 1px 15px  #9400d3';
         newNode.setAttribute('id', 'catImage')
+        //
         imageContainer.replaceChild(newNode, imageContainer.childNodes[0]);
+
+        const intelligenceCell = document.getElementById("intelligenceCell");
+        intelligenceCell.innerHTML = "<p>" + intelligence + "</p>";
+        const sheddingCell = document.getElementById("sheddingCell");
+        sheddingCell.innerHTML= "<p>" + shedding_level + "</p>";
+        const socialCell = document.getElementById("socialCell");
+        socialCell.innerHTML = "<p>" + social_needs + "</p>";
+
         
     }catch(error){
         console.log(error);
