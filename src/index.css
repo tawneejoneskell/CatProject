@@ -99,11 +99,16 @@ input:hover,select:hover{
     clear: left;
 }
 
+.secondRow {
+    height: 60px;
+}
+
 .secondRow td {
     background-color : #fff5ee;
     border-color: dimgrey;
     border-width: 1px;
     border-style: solid;
+    text-align: center;
 }
 
 .thirdRow td {
@@ -112,4 +117,5 @@ input:hover,select:hover{
     border-width: 1px;
     border-style: solid;
     text-align: center;
+    font-family: 'Lucida Sans';
 }
