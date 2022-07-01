@@ -1,6 +1,9 @@
 #container{
     margin-left: 40px;
-    margin-top: 100px;
+}
+#contentContainer {
+    display: flex;
+    justify-content: space-between;
 }
 body {
     background-color: #fff5ee;
@@ -17,8 +20,8 @@ body {
 @keyframes buttonAnim {
     from { background-color:#9400d3;
             color:black}
-    to { background-color:#310742;
-            color:#9400d3;}
+    to { background-color:#7f13aa;
+            color: lightgrey}
 }
 h4 {
     font-family: 'Lucida Sans';
@@ -36,18 +39,18 @@ h4 {
     width: 100%;
     background-color: #9400d3;
     line-height: 80px;
+    border-bottom-width: 1px;
+    border-bottom-color: #310742;
+    border-bottom-style: double;
 }
 #navText {
     margin-right: 20px;
 }
 span {
-    list-style-type: none;
     font-family: Lucida Sans;
     color: #310742;
+    font-size: 18px;
 
-}
-li {
-    display: inline;
 }
 table{
     border-radius: 4px;
@@ -73,12 +76,8 @@ a:link, a:hover, a:visited, a:active {
     color:black;
 }
 img {
-    border-radius: 4px;
     width: auto;
     height: auto;
-}
-#logoImage{
-
 }
 p {
    color:black
@@ -105,24 +104,34 @@ input, select {
 input:hover,select:hover{
     background-color: lightgray;
 }
-#paragraphContainer{
-    float: left;
-}
 #tableContainer{
+    margin-top: 10px;
     margin-right: 40px;
-    float: right;
+    display: none;
 }
 #formContainer{
-    margin-top: 100px;
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 8px;
+    background-color: #310742;
+    width: 450px;
+    border-radius: 10px;
 }
-
-.inputAndLabel label {
-    float: left;
-    margin-bottom: 5px
+.inputAndLabel{ 
+    display: flex;
+    justify-content: space-between;
+}
+label {
+    color: lightgray;
+    font-size: 20px;
+    font-family: 'Arial';    
 }
 
 .selectAndLabel {
-    clear: left;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .secondRow {
@@ -144,4 +153,8 @@ input:hover,select:hover{
     border-style: solid;
     text-align: center;
     font-family: 'Lucida Sans';
+}
+
+optgroup {
+    font-family: 'verdana';
 }
