@@ -14,15 +14,35 @@ more not 90s looking. -->
     <div ID="navBar">
         <img ID="logoImage" src="../Images/catlogo.PNG" />
     <div ID="navText">
-        <span> About Us</span>
-        <span> Contact Us </span>
+        <span>About Us</span>
+        <span>| Contact Us </span>
     </div>
 </div>
     <div ID="container">
-        <h4 ID="header"> Ready to pick your favorite Cat?</h4>
+        
         <div ID="contentContainer">
-            <div ID="paragraphContainer">
-                <p> Choose your Cat!</p>
+            <div ID="formAndHeader">
+            <h4 ID="header"> Ready to pick your favorite Cat?</h4>
+            <div ID="formContainer">
+                <form ID="catForm" onSubmit="submitFunction()">
+                    <div class="inputAndLabel">
+                        <label for="userName">Enter your Name:</label>
+                            <input ID="nameInput" type="text" name="nameInput" required />
+                    </div>
+                    <div class="selectAndLabel">
+                        <label for="catMenu">Kitty:</label>
+                        <select ID="dropdownMenu">
+                            <option disabled selected value>--SELECT--</option>
+                            <optgroup label="Cats">
+                            <option> American Shorthair</option>
+                            <option> Maine Coon</option>
+                            <option> Scottish Fold</option>
+                        </optgroup>
+                        </select>
+                    </div>
+                </form>
+                <button ID="submitButton" onclick="getCatData(event)">Submit</button>
+            </div>
             </div>
             <div ID="tableContainer">
                 <table>
@@ -37,8 +57,8 @@ more not 90s looking. -->
                         <td ID="socialCell"></td>
                     </tr>
                     <tr class="thirdRow">
-                        <td colspan="3"><a href=https://en.wikipedia.org/wiki/American_Shorthair><span
-                                    ID="askExperts">Ask the Experts:</span></a></td>
+                        <td colspan="3"><a ID="wikiLink" target="_blank" rel="noopener noreferrer"><span
+                                    ID="askExperts"></span></a></td>
                     </tr>
                 </table>
                 </table>
@@ -47,23 +67,6 @@ more not 90s looking. -->
         <!--
         <a href="https://mysnhu.force.com/mysnhu/s/"> Click here!</a>
         -->
-        <div ID="formContainer">
-            <form ID="catForm" onSubmit="submitFunction()">
-                <div class="inputAndLabel">
-                    <label for="userName">Enter your Name:
-                        <input ID="nameInput" type="text" name="nameInput" required /></label>
-                </div>
-                <div class="selectAndLabel">
-                    <label for="catMenu">Kitty:</label>
-                    <select value="American Shorthair" ID="dropdownMenu">
-                        <option selected> American Shorthair</option>
-                        <option> Maine Coon</option>
-                        <option> Scottish Fold</option>
-                    </select>
-                </div>
-            </form>
-            <button ID="submitButton" onclick="getCatData(event)">Submit</button>
-        </div>
         <div ID="imageContainer"></div>
     </div>
 
