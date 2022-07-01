@@ -1,15 +1,13 @@
-div {
-    background-color:#fff5ee;
-    border-radius: 4px;
-     
-}
 #container{
     margin-left: 40px;
+    margin-top: 100px;
 }
-Body {
+body {
     background-color: #fff5ee;
     font-family: 'Lucida Sans';
     font-size: medium;
+    margin: 0;
+    padding: 0;
 }
 @keyframes colorAnim {
     from {color:#9400d3;}
@@ -24,7 +22,32 @@ Body {
 }
 h4 {
     font-family: 'Lucida Sans';
-    font-size: larger;   
+    font-size: larger;  
+}
+.menuItems{
+    align-content: center;
+    align-items: center;
+    
+}
+#navBar {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    background-color: #9400d3;
+    line-height: 80px;
+}
+#navText {
+    margin-right: 20px;
+}
+span {
+    list-style-type: none;
+    font-family: Lucida Sans;
+    color: #310742;
+
+}
+li {
+    display: inline;
 }
 table{
     border-radius: 4px;
@@ -53,6 +76,9 @@ img {
     border-radius: 4px;
     width: auto;
     height: auto;
+}
+#logoImage{
+
 }
 p {
    color:black

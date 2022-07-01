@@ -2,7 +2,8 @@
 <html>
 <!-- navigation bar should consist of a logo (you can design) in the upper-left-hand corner, at least 2 clickable links which we will make 
 interactive via JS and turn into drop-down menus. Try to use drop-shadows, box-radius and other css themes to make the navigation bar look
-more not 90s looking. --> 
+more not 90s looking. -->
+
 <head>
     <meta charset="ISO-8859-1">
     <link rel="stylesheet" href="./index.css">
@@ -10,55 +11,63 @@ more not 90s looking. -->
 </head>
 
 <body ID="body">
+    <div ID="navBar">
+        <img ID="logoImage" src="../Images/catlogo.PNG" />
+    <div ID="navText">
+        <span> About Us</span>
+        <span> Contact Us </span>
+    </div>
+</div>
     <div ID="container">
         <h4 ID="header"> Ready to pick your favorite Cat?</h4>
-        <div ID = "contentContainer">
-        <div ID="paragraphContainer">
-        <p> Choose your Cat!</p>
-        </div>
-        <div ID="tableContainer">
-            <table>
-                <tr class="firstRow">
-                <th> Is he a smart boy?</th>
-                <th> Is he a sheddy boy?</th>
-                <th> Does he like other kitties?</th>
-                </tr>
-                <tr class="secondRow">
-                    <td ID="intelligenceCell"></td>
-                    <td ID="sheddingCell"></td>
-                    <td ID="socialCell"></td>
-                </tr>
-                <tr class="thirdRow">
-                <td colspan="3"><a href=https://en.wikipedia.org/wiki/American_Shorthair><span ID="askExperts">Ask the Experts:</span></a></td> 
-                </tr>
+        <div ID="contentContainer">
+            <div ID="paragraphContainer">
+                <p> Choose your Cat!</p>
+            </div>
+            <div ID="tableContainer">
+                <table>
+                    <tr class="firstRow">
+                        <th> Is he a smart boy?</th>
+                        <th> Is he a sheddy boy?</th>
+                        <th> Does he like other kitties?</th>
+                    </tr>
+                    <tr class="secondRow">
+                        <td ID="intelligenceCell"></td>
+                        <td ID="sheddingCell"></td>
+                        <td ID="socialCell"></td>
+                    </tr>
+                    <tr class="thirdRow">
+                        <td colspan="3"><a href=https://en.wikipedia.org/wiki/American_Shorthair><span
+                                    ID="askExperts">Ask the Experts:</span></a></td>
+                    </tr>
                 </table>
-            </table>
-        </div>
+                </table>
+            </div>
         </div>
         <!--
         <a href="https://mysnhu.force.com/mysnhu/s/"> Click here!</a>
         -->
-        <div ID = "formContainer">
-        <form ID="catForm" onSubmit="submitFunction()"> 
-            <div class="inputAndLabel">
-            <label for="userName">Enter your Name:
-            <input ID="nameInput" type="text" name="nameInput" required/></label>
-            </div>
-            <div class="selectAndLabel">
-            <label for="catMenu">Kitty:</label>
-            <select value="American Shorthair" ID="dropdownMenu">
-                <option selected> American Shorthair</option>
-                <option> Maine Coon</option>
-                <option> Scottish Fold</option>
-            </select>
+        <div ID="formContainer">
+            <form ID="catForm" onSubmit="submitFunction()">
+                <div class="inputAndLabel">
+                    <label for="userName">Enter your Name:
+                        <input ID="nameInput" type="text" name="nameInput" required /></label>
+                </div>
+                <div class="selectAndLabel">
+                    <label for="catMenu">Kitty:</label>
+                    <select value="American Shorthair" ID="dropdownMenu">
+                        <option selected> American Shorthair</option>
+                        <option> Maine Coon</option>
+                        <option> Scottish Fold</option>
+                    </select>
+                </div>
+            </form>
+            <button ID="submitButton" onclick="getCatData(event)">Submit</button>
         </div>
-        </form>
-        <button ID="submitButton" onclick="getCatData(event)">Submit</button>
-    </div>
         <div ID="imageContainer"></div>
     </div>
-    
-    <script src="../dist/bundle.js" ></script>
+
+    <script src="../dist/bundle.js"></script>
 </body>
 
 </html>
