@@ -2,9 +2,6 @@ let dropdown = document.getElementById("dropdownMenu");
 let nameInputValue = nameInput.value;
 let reloadFlag = false;
 
-window.onload = function () {
-    getDBData();
-}
 
 window.prepareString = function(catString) {
     return catString.replace(" ", "%20")
@@ -32,8 +29,31 @@ class NothingSelectedError extends Error {
     }
 }
 
-window.getDBData = async function(e) {
+window.writeDBData = async function(e) {
+    let user = {
+        firstName: "Aretha",
+        lastName: "Jones",
+        email: "Aretha@catmail.org",
+        username: "mama",
+        password: "cat",
+    }
+    try{
+        let request = await fetch('http://localhost:3000/newuser', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        });
+        let result = await request.json();
+        console.log(result);
+    } catch(error) {
+        console.log(error);
+    }
+}
 
+window.getDBData = async function(e) {
+try{
     let request= await fetch(`http://localhost:3000/users`, {
         method: "GET",
         headers: {
@@ -43,6 +63,9 @@ window.getDBData = async function(e) {
     // this is the RESULT of the API call.
     let result= await request.json();
     console.log(result);
+} catch(error) {
+    console.log(error);
+}
 }
 
 window.getCatData = async function(e){
