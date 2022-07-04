@@ -2,6 +2,10 @@ let dropdown = document.getElementById("dropdownMenu");
 let nameInputValue = nameInput.value;
 let reloadFlag = false;
 
+window.onload = function () {
+    getDBData();
+}
+
 window.prepareString = function(catString) {
     return catString.replace(" ", "%20")
 }
@@ -26,6 +30,19 @@ class NothingSelectedError extends Error {
         super(message);
         this.name = "Nothing Selected Error";
     }
+}
+
+window.getDBData = async function(e) {
+
+    let request= await fetch(`http://localhost:3000/users`, {
+        method: "GET",
+        headers: {
+
+        }, 
+    });
+    // this is the RESULT of the API call.
+    let result= await request.json();
+    console.log(result);
 }
 
 window.getCatData = async function(e){
