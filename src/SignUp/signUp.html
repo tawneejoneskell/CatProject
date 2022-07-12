@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="ISO-8859-1">
-        <link rel="stylesheet" href="./signUp.css">
-        <title> Sign Up! </title>
-    </head>
-    <body>
-        <div ID="navBar">
-            <img ID="logoImage" src="../../Images/catlogo.PNG" />
+
+<head>
+    <script src="../javascript/randomCat.js"> </script>
+    <meta charset="ISO-8859-1">
+    <link rel="stylesheet" href="./signUp.css">
+    <title> Sign Up! </title>
+</head>
+
+<body>
+    <div ID="navBar">
+        <img ID="logoImage" src="../../Images/catlogo.PNG" />
         <div ID="navText">
-            <span>About Us</span>
-            <a href = "../ContactUs/contactUs.html">| Contact Us </a>
+            <a href="../aboutUs/aboutUs.html">
+                About Us
+            </a>
+            <a href="../ContactUs/contactUs.html">| Contact Us </a>
         </div>
     </div>
-        <div ID = "container">
-    <h1 ID="signUpHeader"> Welcome! Please create an account:</h1>
+    <div ID="container">
+        <h1 ID="signUpHeader"> Welcome! Please create an account:</h1>
         <div ID="signUpContainer">
 
-        <form ID="signUpForm">
-            <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname"><br><br>
-            <label for="lname">Last name:</label>
-            <input type="text" id="lname" name="lname"><br><br>
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email"><br><br>
-            <label for="username"> Username:</label>
-            <input type="text" id="username" name="username"> <br> <br>
-            <label for="password"> Password:</label>
-            <input type="password" placeholder="Enter your password" id="password" name="password"> <br> <br>
-            <input ID="formsubmitButton" type="submit" value="Submit">
-          </form>
+            <form ID="signUpForm">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname"><br><br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email"><br><br>
+                <label for="username"> Username:</label>
+                <input type="text" id="username" name="username"> <br> <br>
+                <label for="password"> Password:</label>
+                <input type="password" placeholder="Enter your password" id="password" name="password"> <br> <br>
+                <input ID="formsubmitButton" type="submit" value="Submit">
+            </form>
         </div>
     </div>
-    <script src = "../signUp/signUp.js"></script>
-    </body>
+    <script src="../signUp/signUp.js"></script>
+</body>
+
 </html>

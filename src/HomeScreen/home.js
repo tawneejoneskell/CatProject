@@ -57,7 +57,7 @@ window.getCatData = async function(e){
     //present loading icon until catData is available:
 
     const loadingIcon = document.createElement("img");
-    loadingIcon.setAttribute("src", "../../Images/loadingIcon.jpg");
+    loadingIcon.setAttribute("src", "./Images/loadingIcon.jpg");
     loadingIcon.style.maxHeight = '100px';
     loadingIcon.style.maxWidth = '100px';
     imageContainer.appendChild(loadingIcon);
@@ -130,7 +130,7 @@ window.getCatData = async function(e){
         const errorIcon = document.createElement('img');
         errorIcon.style.maxHeight = '150px';
         errorIcon.style.maxWidth = '150px';
-        errorIcon.setAttribute("src", "../../Images/errorIcon.png");
+        errorIcon.setAttribute("src", "./Images/errorIcon.png");
         imageContainer.replaceChild(errorIcon, imageContainer.childNodes[0]);
     }
     reloadFlag = true;
