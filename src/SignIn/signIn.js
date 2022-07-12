@@ -25,6 +25,7 @@ window.writeDBData = async function(e) {
             body: JSON.stringify(user)
         });
         let result = await request.json();
+        location.href="../index.html";
         console.log(result);
     } catch(error) {
         console.log(error);
