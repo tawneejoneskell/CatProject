@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+        <link rel="stylesheet" href="./contactUs.css">
+        <title> Contact Us </title>
+    </head>
+    <body>
+        <div ID="navBar">
+            <img ID="logoImage" src="../../Images/catlogo.PNG" />
+        <div ID="navText">
+            <span>About Us</span>
+        </div>
+    </div>
+        <div ID = "container">
+    <h1 ID="signUpHeader"> Please fill out this form to contact us:</h1>
+        <div ID="signUpContainer">
+
+        <form ID="contactForm">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="authorId">Author ID:</label>
+            <input type="text" id="authorId" name="authorId"><br><br>
+            <label for="requestContent">Your Comment or Suggestion: </label>
+            <textarea ID="requestContent" name="requestContent" rows = "10" cols="50" placeholder="Please write your comment here..." required>
+            </textarea>
+            <input ID="formsubmitButton" type="submit" value="Submit">
+          </form>
+        </div>
+    </div>
+    <script src = "../ContactUs/contactUs.js"></script>
+    </body>
+</html>

@@ -1,4 +1,4 @@
-const signInForm = document.getElementById("signInForm");
+const signUpForm = document.getElementById("signUpForm");
 
 
 window.writeDBData = async function(e) {
@@ -26,9 +26,10 @@ window.writeDBData = async function(e) {
         });
         let result = await request.json();
         console.log(result);
+        location.href="../HomeScreen/home.html"
     } catch(error) {
         console.log(error);
     }
 }
 
-signInForm.addEventListener("submit", writeDBData);
+signUpForm.addEventListener("submit", writeDBData);
