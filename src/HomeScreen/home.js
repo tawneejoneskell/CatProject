@@ -29,29 +29,6 @@ class NothingSelectedError extends Error {
     }
 }
 
-window.writeDBData = async function(e) {
-    let user = {
-        firstName: "Aretha",
-        lastName: "Jones",
-        email: "Aretha@catmail.org",
-        username: "mama",
-        password: "cat",
-    }
-    try{
-        let request = await fetch('http://localhost:3000/newuser', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(user)
-        });
-        let result = await request.json();
-        console.log(result);
-    } catch(error) {
-        console.log(error);
-    }
-}
-
 window.getDBData = async function(e) {
 try{
     let request= await fetch(`http://localhost:3000/users`, {
@@ -114,7 +91,7 @@ window.getCatData = async function(e){
         let imageResult = await imageRequest.json();
         let pictureURL= imageResult[0].url;
         // This is your hint and guide for how to take the cat data returned from the RESULT variable above and make it appear in your table.
-        // what I'm doing below is creating a new node or element, assigning it styles before it's even created, then finding a place in the
+        // what I'm doing below is creating a new node or element, assignUpg it styles before it's even created, then finding a place in the
         // DOM to append it (think of appending like giving your element up for adoption to a new parent).
         // instead of "replaceChild", you'll simply be using "appendChild"... you just need to figure out where you'll be appending it.
         // You need to take the appropriate catdata from the API result and get it into your table. May you be prosperous.
