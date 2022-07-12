@@ -8,7 +8,7 @@ const path = require('path');
 module.exports = {
 
   // Path to your entry point. From this file Webpack will begin its work
-  entry: './entry.js',
+  entry: './src/SignUp/signUp.js',
 
   // Path and filename of your result bundle.
   // Webpack will bundle all JavaScript into this file
